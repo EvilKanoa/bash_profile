@@ -1,0 +1,30 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+#	name = Kanoa Haley
+#	email = kanoa@kanoa.ca 
+[user]
+	email = kanoa@kanoa.ca
+	name = EvilKanoa
+[push]
+	default = simple
+[core]
+	excludesfile = /Users/kanoa/.gitignore_global
+	autocrlf = input
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/kanoa/.stCommitMsg
+[alias]
+	ch = checkout
+	ps = push
+	pl = pull
+	cm = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	a = add

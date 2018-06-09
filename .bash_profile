@@ -1,6 +1,21 @@
+eval $(thefuck --alias)
+
 alias json="python -m json.tool"
-alias zombie="cd ~/Documents/ZombieWorld/ZombieWorld"
 alias uni="cd ~/Documents/University"
+alias uog="ssh khaley@portkey.socs.uoguelph.ca ssh linux.socs.uoguelph.ca"
+alias work="cd ~/Documents/MappedIn/;echo Enjoy your day, Kanoa!"
+
+alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit '
+alias gd='git diff '
+alias go='git checkout '
+alias gps='git push '
+alias gpl='git pull '
+alias gm='git commit -m '
+alias gl='git log --graph --all'
+alias md5sum='md5 -r'
 
 export CLICOLOR=1
 export LSCOLORS=ExfxcxdxBxegedabagacad
@@ -42,3 +57,17 @@ __prompt_command() {
 }
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+export PATH="/usr/local/opt/node@6/bin:$PATH"
+export PATH="/usr/local/opt/node@8/bin:$PATH"
+
+if [ -f ~/.bash_completion ]; then
+    source ~/.bash_completion
+fi
+
+export CONFLUENT_CURRENT="/usr/local/confluent/var"
+
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+

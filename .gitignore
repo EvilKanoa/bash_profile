@@ -1,3 +1,7 @@
-*
-!.bash_profile
-!.gitignore
+blob-store
+compile-cache
+dev
+storage
+.apm
+.node-gyp
+.npm

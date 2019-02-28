@@ -2,8 +2,10 @@ eval $(thefuck --alias)
 
 alias json="python -m json.tool"
 alias uni="cd ~/Documents/University"
-alias uog="ssh khaley@portkey.socs.uoguelph.ca ssh linux.socs.uoguelph.ca"
+alias uog="ssh uog"
 alias work="cd ~/Documents/MappedIn/;echo Enjoy your day, Kanoa!"
+alias run_mongo="mongod --config /usr/local/etc/mongod.conf"
+alias npm="CPPFLAGS=-I/usr/local/opt/openssl/include LDFLAGS=-L/usr/local/opt/openssl/lib npm"
 
 alias gs='git status '
 alias ga='git add '
@@ -22,6 +24,16 @@ export LSCOLORS=ExfxcxdxBxegedabagacad
 
 source ~/.git-completion.bash
 source ~/.git-prompt.sh
+__git_complete gs _git_status
+__git_complete ga _git_add
+__git_complete gb _git_branch
+__git_complete gc _git_commit
+__git_complete gd _git_diff
+__git_complete go _git_checkout
+__git_complete gps _git_push
+__git_complete gpl _git_pull
+__git_complete gm _git_commit
+__git_complete gl _git_log
 
 GIT_PS1_SHOWUPSTREAM="verbose"
 GIT_PS1_SHOWDIRTYSTATE=true
@@ -57,8 +69,6 @@ __prompt_command() {
 }
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-export PATH="/usr/local/opt/node@6/bin:$PATH"
-export PATH="/usr/local/opt/node@8/bin:$PATH"
 
 if [ -f ~/.bash_completion ]; then
     source ~/.bash_completion
@@ -70,4 +80,7 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
 

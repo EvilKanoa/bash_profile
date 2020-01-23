@@ -16,6 +16,8 @@ alias go='git checkout '
 alias gps='git push '
 alias gpl='git pull '
 alias gm='git commit -m '
+alias grb='git rebase '
+alias gf='git fetch '
 alias gl='git log --graph --all'
 alias md5sum='md5 -r'
 
